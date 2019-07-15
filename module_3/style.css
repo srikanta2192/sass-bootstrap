@@ -1,0 +1,65 @@
+@font-face {
+  src: url("assets/thesassway-icons.woff");
+  font-family: sassway;
+  font-style: normal; }
+body.container-fluid {
+  padding: 0;
+  font-family: sassway; }
+  body.container-fluid header .navbar {
+    border-bottom: 1px solid lightgray; }
+    body.container-fluid header .navbar .navbar-nav .sw-icon a {
+      padding: 0; }
+    body.container-fluid header .navbar .navbar-nav li + li {
+      margin-left: 5%; }
+    body.container-fluid header .navbar .navbar-nav li i {
+      color: rgba(203, 104, 152, 0.8); }
+  body.container-fluid .logo-div .logo {
+    text-align: center;
+    margin-top: 10%; }
+  body.container-fluid .content-div .avatar {
+    margin-bottom: 20px; }
+    body.container-fluid .content-div .avatar img {
+      border-radius: 50%;
+      display: block;
+      max-width: 100%;
+      height: auto; }
+  body.container-fluid .content-div .info {
+    font-family: "Lora", Times, serif; }
+    body.container-fluid .content-div .info h3 a {
+      color: black;
+      text-decoration: none;
+      font-size: 100%;
+      font-weight: bolder; }
+    body.container-fluid .content-div .info h3 a:hover {
+      color: rgba(203, 104, 152, 0.8); }
+    body.container-fluid .content-div .info p {
+      font-size: 1.25rem; }
+      body.container-fluid .content-div .info p a {
+        color: rgba(203, 104, 152, 0.8); }
+      body.container-fluid .content-div .info p a:visited {
+        color: rgba(232, 118, 173, 0.8); }
+  body.container-fluid .content-div .summary > .row {
+    margin-top: 3rem; }
+  body.container-fluid .footer {
+    background: #36363d;
+    height: 400px;
+    color: gainsboro;
+    padding-top: 100px; }
+    body.container-fluid .footer .contributors {
+      font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      body.container-fluid .footer .contributors h4 {
+        color: white;
+        font-size: 18px; }
+      body.container-fluid .footer .contributors ul {
+        padding-left: 0;
+        list-style-type: none; }
+        body.container-fluid .footer .contributors ul a {
+          padding: 0 auto;
+          text-decoration: none;
+          color: lightgray; }
+        body.container-fluid .footer .contributors ul a:hover {
+          text-decoration: underline; }
+        body.container-fluid .footer .contributors ul li + li {
+          margin-top: 10px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,107 @@
+@font-face{
+    src: url('assets/thesassway-icons.woff');
+    font-family: sassway;
+    font-style: normal;
+}
+
+body.container-fluid{
+    padding: 0;
+    font-family: sassway;
+    header{
+        .navbar{
+            border-bottom: 1px solid lightgray;
+            
+            .navbar-nav{
+                .sw-icon a {
+                    padding: 0;
+                }
+                li+li{
+                    margin-left: 5%;
+                }
+                li i {
+                    color: rgba(203, 104, 152, 0.8);
+                }
+            }
+           
+        }
+    }
+
+    .logo-div{
+        .logo{
+            text-align: center;
+            margin-top: 10%;
+        }
+    }
+
+    .content-div{
+        .avatar{
+            margin-bottom: 20px;
+            img {
+                border-radius: 50%;
+                display: block;
+                max-width: 100%;
+                height: auto;;
+            }
+        }
+        .info{
+            font-family: "Lora", Times, serif;
+            h3 {
+                a{
+                    color: black;
+                    text-decoration: none;
+                    font-size: 100%;
+                    font-weight: bolder;
+                }
+
+                a:hover{
+                    color: rgba(203, 104, 152, 0.8);
+                }
+            }
+            p {
+                font-size: 1.25rem;
+
+                a {
+                    color:  rgba(203, 104, 152, 0.8);
+                }
+                a:visited{
+                    color:rgba(232, 118, 173, 0.8);
+                }
+            }
+        }
+
+        .summary>.row{
+            margin-top: 3rem;
+        }
+    }
+
+    .footer{
+        background: #36363d;
+        height: 400px;
+        color:gainsboro;
+        padding-top: 100px;
+        
+        .contributors{
+            font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                h4 {
+                    color:white;
+                    font-size: 18px;
+                }
+            ul{
+                
+                padding-left: 0;
+                list-style-type: none;
+                a{
+                    padding: 0 auto;
+                    text-decoration: none;
+                    color: lightgray;
+                }
+                a:hover{
+                    text-decoration: underline;
+                }
+                li+li{
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

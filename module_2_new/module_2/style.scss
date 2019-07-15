@@ -1,0 +1,65 @@
+@mixin border-radius($radius: 20px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin triangle($width){
+  width: 0; 
+  height: 0; 
+  border-top: $width solid transparent;
+  border-bottom: $width solid transparent;
+
+  border-left: $width solid green;
+}
+
+$color_classes:(orange,red);
+
+body{
+    color: white;
+    .example_div{
+        color: gray;
+        &:hover{
+            background: lightgray;
+        }
+        @each $color_div in $color_classes {
+            .#{$color_div} {
+                height: 20px;
+                width: 300px;
+                background: #{$color_div};
+            }
+        }
+        .one{
+            width: percentage(600px/1440px);
+            float:left;
+            background: coral;
+        }
+        .two{
+            background: blue;
+            width: percentage(100px/1440px);
+            float: right;
+        }
+        .triangle_div{
+            @include triangle(60px);
+            display: block;
+        }
+        
+        .inside_example_div{
+            @include border-radius;
+            height: 20px;
+            width: 200px;
+            background: coral;
+    
+            .temp {
+                color: blueviolet;
+            }
+        }
+        
+        .sibling_inside_example_div{
+            @extend .inside_example_div;
+            background: red;
+        }
+    }
+}
+
+

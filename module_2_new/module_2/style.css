@@ -1,0 +1,53 @@
+body {
+  color: white;
+}
+body .example_div {
+  color: gray;
+}
+body .example_div:hover {
+  background: lightgray;
+}
+body .example_div .orange {
+  height: 20px;
+  width: 300px;
+  background: orange;
+}
+body .example_div .red {
+  height: 20px;
+  width: 300px;
+  background: red;
+}
+body .example_div .one {
+  width: 41.6666666667%;
+  float: left;
+  background: coral;
+}
+body .example_div .two {
+  background: blue;
+  width: 6.9444444444%;
+  float: right;
+}
+body .example_div .triangle_div {
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid green;
+  display: block;
+}
+body .example_div .inside_example_div, body .example_div .sibling_inside_example_div {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  height: 20px;
+  width: 200px;
+  background: coral;
+}
+body .example_div .inside_example_div .temp, body .example_div .sibling_inside_example_div .temp {
+  color: blueviolet;
+}
+body .example_div .sibling_inside_example_div {
+  background: red;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,276 @@
+@mixin title_style{
+        font-weight: 700; 
+        letter-spacing: 1px;
+}
+@mixin block_titles{
+    @include title_style;
+    color: #666;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@mixin font-family($family){
+    @if $family=='Lato' {
+        font-family: 'Lato', sans-serif;
+    }
+    @else if $family =="Mon"{
+        font-family: 'Montserrat',sans-serif;        
+    }
+}
+@keyframes bounce-in {
+    0%  { left:0px; top:200px;}
+    50% { left:0px; top:-10px;}
+    75% { left:0px; top:0px; }
+}
+
+$i:0;
+
+body{
+    margin: 0;
+    .header{
+        margin: 0px auto;
+        .top_nav{
+            @include font-family('Lato');
+            position: fixed;
+            top:0;
+            left:0;
+            right:0;
+            margin: 0px auto;
+            z-index: 1;
+            list-style-type: none;
+            background: #67b0d1;
+            overflow: hidden;
+            height: 50px;
+            li{
+                float: right;
+                margin: 15px 40px 10px 10px ;
+                a{
+                    color:white;
+                    display: block;
+                    text-decoration: none
+                }
+            }
+            li.logo{
+                float:left;
+
+                a{
+                    color:white;
+                }
+            }
+        }
+    }
+    .grid-container{        
+        @include font-family('Mon');
+        display: grid;
+        grid-row-gap: 10px;
+        width: 100%;
+        .intro{
+            @include title_style;
+            background: url('../module_2_squad_free/assets/bg1.jpg') no-repeat top center;
+            color: white;       
+            min-height: 700px;
+            text-align: center;
+            .welcome_title{
+                font-size: 3rem;
+                margin:15% auto 0;
+            }
+            .welcome_caption{
+                font-size: 1.25rem;
+            }
+        }
+
+        .about_us.grid-item{
+            .about_us_title{
+                @include block_titles;
+            }            
+            .people{
+                padding-left: 200px;
+                .grid-container{
+                    @include font-family("Mon");
+                    color: #666;
+                    
+                    display: grid;
+                          
+                    grid-gap: 20px;          
+                    grid-template-columns: 20% 20% 20% 20%;
+                    text-align: center;
+                    min-height: 500px;
+                    .grid-item{
+                       
+                        height: 100%;
+                        max-height: 400px;
+                        text-align: center;
+
+                        @for $i from 1 through 4{
+                            .item-#{$i}{
+                            animation-fill-mode: both;
+                            padding-top:10px;
+                            background: #f9f9f9;
+                            position: relative;
+                            -webkit-animation-name: bounce-in; 
+                            -webkit-animation-duration: 1s*$i ; 
+                            animation-name: bounce-in;
+                            animation-duration: 1s+$i; 
+                            }
+                        }
+                        
+                       
+                        .people_title{
+                            @include title_style;
+                            text-transform: uppercase;
+                        }
+                        .people_role{
+                            font-size: 16px;
+                            font-weight: 300;
+                            line-height: 1.6em;
+                        }
+                        .people_picture{
+                            margin-bottom: 20px;
+
+                            img {
+                                border-radius: 50%;
+                                display: block;
+                                max-width: 100%;
+                                height: auto;;
+                            }
+                        }
+                    }
+            }
+            }
+        }
+
+        .our_services.grid-item{
+            background: #f9f9f9;
+            color: #666;
+            height: 500px;
+            .our_services_title{
+                @include block_titles;
+            }
+            .services{
+                margin-top: 100px;
+                padding-left: 150px;
+                .grid-container{
+                    grid-template-columns: 22% 22% 22% 22%;
+                    grid-gap: 20px;
+                    .grid-item{
+                        text-align: center;
+                        @for $i from 1 through 4{
+                            .item-#{$i}{
+                                .service_title{
+                                    @include font-family("Mon");
+                                    text-transform: uppercase;
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                    letter-spacing: 1px;
+                                }
+                                .service_statement{
+                                    @include font-family("Lato");
+                                    font-weight: lighter;
+                                    line-height: 20px;
+                                    margin: 30px auto;
+                                    letter-spacing: 0.5px;
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .grid-item.the_end{
+            margin-top: 50px;
+            height: 300px;
+            background: #67b0d1;
+            p{
+                @include font-family('Lato');
+                margin-top: 120px;
+                color:#f8f8f8;
+                text-align: center;
+                font-weight: 300;
+            }
+        }
+
+        .get_in_touch.grid-item{
+            color: #666;
+            height: 100%;
+            .get_in_touch_title{
+                @include block_titles;
+            }
+            .services{
+                margin-top: 100px;
+                padding-left: 150px;
+                .grid-container{
+                    grid-template-columns: 22% 27% 25% 22%;
+                    .grid-item{
+                        min-height: 200px;
+                        background: #f9f9f9;
+                        padding-top: 20px;
+                        label{
+                            margin-left: 20px;
+                        }
+                        .contact_details{
+                            input{
+                                display: block;
+                                width: 100%;
+                                height: 20px;
+                                padding: 6px 12px;
+                                margin-left: 20px;
+                                margin-top: 5px;
+                                font-size: 14px;
+                                line-height: 1.5;
+                                color: #555;
+                                background-color: #fff;
+                                background-image: none;
+                                border: none
+                            }
+                        }
+                        .message_field{
+                            textarea{
+                                display: block;
+                                width: 80%;
+                                height: 60px;
+                                padding: 6px 12px;
+                                margin: auto 20px;
+                                font-size: 14px;
+                                line-height: 1.5;
+                                color: #555;
+                                border: none;
+                                background-color: #fff;
+                                background-image: none;
+                            }
+                        }
+                    }
+
+                    .grid-item.address-item{
+                        background: white;
+                        margin-left: 10px;
+                        line-height: 0.5;
+
+                        .address_details{
+                            p{
+                                font-weight: lighter;
+                            }
+                        }
+                        .address_email h4{
+                            margin-top: 50px;
+                        }
+                        .address_social{
+                            ul{
+                                list-style-type: none;
+                                li {
+                                    float:left;
+
+                                    a{
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    
+                }
+            }
+        }
+    }
+}
